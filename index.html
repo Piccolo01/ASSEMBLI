@@ -34,7 +34,6 @@
     <!-- HEADER / NAVBAR -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo -->
             <a href="#" class="flex items-center gap-2 group">
                 <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-sm group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-screwdriver-wrench text-yellow-400"></i>
@@ -42,7 +41,6 @@
                 <span class="text-2xl font-black text-brand-blue tracking-tight">Assembli</span>
             </a>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 font-medium text-gray-600 text-sm">
                 <a href="#servizi" class="hover:text-brand-accent transition-colors">Servizi</a>
                 <a href="#perche-noi" class="hover:text-brand-accent transition-colors">Perché noi</a>
@@ -51,7 +49,6 @@
                 <a href="#contatti" class="hover:text-brand-accent transition-colors">Contatti</a>
             </nav>
 
-            <!-- Call to Action / Info -->
             <div class="flex items-center gap-6">
                 <a href="tel:+393459299812" class="hidden lg:flex items-center gap-2 font-semibold text-brand-blue text-sm">
                     <i class="fa-solid fa-phone text-blue-600"></i>
@@ -66,14 +63,12 @@
 
     <!-- HERO SECTION -->
     <section class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Badge Localizzazione -->
         <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
             <span class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
             <i class="fa-solid fa-users text-yellow-600"></i> Squadra di assemblatori professionisti d'esperienza in provincia di Modena e Bologna
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <!-- Colonna Sinistra: Hero Content & Immagine -->
             <div class="lg:col-span-7 space-y-6">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-blue tracking-tight leading-tight">
                     Il montaggio mobili, <span class="text-blue-600">fatto bene.</span> Senza stress.
@@ -83,7 +78,6 @@
                     Assembli trasforma i tuoi scatoloni in arredo pronto all'uso. Partner ufficiali IKEA e TaskRabbit, con strumenti professionali e garanzia strutturale su ogni installazione.
                 </p>
 
-                <!-- Immagine Hero con badge partner -->
                 <div class="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100 mt-8">
                     <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Attrezzi per montaggio mobili" class="w-full h-80 object-cover">
                     
@@ -98,7 +92,7 @@
                 </div>
             </div>
 
-            <!-- Colonna Destra: Widget Calcolatore Preventivo Rapido -->
+            <!-- Widget Calcolatore Preventivo Rapido -->
             <div id="preventivo" class="lg:col-span-5">
                 <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 custom-shadow relative">
                     <div class="border-b border-gray-100 pb-4 mb-6">
@@ -127,8 +121,13 @@
                         </button>
                     </div>
 
-                    <!-- Step 2: Dati di Contatto Generici -->
+                    <!-- Step 2: Form Invio Preventivo reale -->
                     <form action="https://formsubmit.co/piccolofrancesco300@gmail.com" method="POST" id="step-2" class="space-y-4 hidden">
+                        <!-- Campo nascosto per passare il numero di mobili calcolato -->
+                        <input type="hidden" name="numero_mobili" id="hidden-num-mobili" value="1">
+                        <input type="hidden" name="_subject" value="Nuova richiesta di preventivo da Assembli">
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div>
                             <label class="block text-xs font-bold text-gray-600 mb-1">Nome e cognome</label>
                             <input type="text" id="cust-name" name="nome" required placeholder="Mario Rossi" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
@@ -156,16 +155,6 @@
                         </div>
                     </form>
 
-                    <!-- Feedback Messaggio Inviato -->
-                    <div id="step-success" class="hidden text-center py-8 space-y-3">
-                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-xl">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-brand-blue">Richiesta inviata!</h4>
-                        <p class="text-xs text-gray-600">Ti contatteremo entro 2 ore lavorative con il tuo preventivo personalizzato valido per 3 mesi.</p>
-                    </div>
-
-                    <!-- Footer del Widget -->
                     <div class="mt-6 pt-4 border-t border-gray-100 grid grid-cols-3 gap-2 text-center text-[10px] text-gray-500 font-medium">
                         <div class="flex items-center justify-center gap-1">
                             <i class="fa-solid fa-bolt text-blue-500"></i> Risposta in 2h
@@ -207,7 +196,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Card Sistemi IKEA -->
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
                     <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" alt="Mobili IKEA" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -226,7 +214,6 @@
                     </div>
                 </div>
 
-                <!-- Card Oltre l'IKEA -->
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
                     <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Arredamento su misura" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -257,7 +244,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Vantaggio 1 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-book-open"></i>
@@ -266,7 +252,6 @@
                     <p class="text-xs text-blue-200 leading-relaxed">Niente istruzioni indecifrabili né pezzi avanzati. Leggiamo noi il manuale al posto tuo.</p>
                 </div>
 
-                <!-- Vantaggio 2 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-toolbox"></i>
@@ -275,7 +260,6 @@
                     <p class="text-xs text-blue-200 leading-relaxed">Avvitatori a batteria, livelle laser, carrelli e tutto il necessario per un montaggio perfetto.</p>
                 </div>
 
-                <!-- Vantaggio 3 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -284,7 +268,6 @@
                     <p class="text-xs text-blue-200 leading-relaxed">Ogni installazione è coperta. Se qualcosa non è perfettamente in bolla, torniamo gratis.</p>
                 </div>
 
-                <!-- Vantaggio 4 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-clock"></i>
@@ -293,7 +276,6 @@
                     <p class="text-xs text-blue-200 leading-relaxed">Preventivo gratuito e senza impegno entro due ore lavorative dalla richiesta.</p>
                 </div>
 
-                <!-- Vantaggio 5 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-user-group"></i>
@@ -302,7 +284,6 @@
                     <p class="text-xs text-blue-200 leading-relaxed">Un tecnico per i piccoli lavori, una squadra coordinata per gli uffici e le grandi installazioni.</p>
                 </div>
 
-                <!-- Vantaggio 6 -->
                 <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
                         <i class="fa-solid fa-star"></i>
@@ -318,7 +299,6 @@
     <section id="come-funziona" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
                 <div class="lg:col-span-5 relative">
                     <div class="absolute -top-4 -left-4 bg-yellow-400 text-blue-900 font-extrabold text-xs px-3 py-1.5 rounded-lg shadow">
                         +2.500 Mobili Montati
@@ -366,12 +346,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SEZIONE NUOVO FORM DI CONTATTO IN BASSO -->
+    <!-- FORM DI CONTATTO IN BASSO -->
     <section id="contatti" class="py-16 bg-white border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -381,34 +360,33 @@
             </div>
 
             <form action="https://formsubmit.co/piccolofrancesco300@gmail.com" method="POST" id="contact-form-bottom" class="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 custom-shadow space-y-4">
+                <input type="hidden" name="_subject" value="Nuovo messaggio di contatto da Assembli">
+                <input type="hidden" name="_captcha" value="false">
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-bold text-gray-600 mb-1">Nome e cognome</label>
-                        <input type="text" required placeholder="Mario Rossi" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                        <input type="text" name="nome" required placeholder="Mario Rossi" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-gray-600 mb-1">Email</label>
-                        <input type="email" required placeholder="mario.rossi@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                        <input type="email" name="email" required placeholder="mario.rossi@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-gray-600 mb-1">Telefono (Opzionale)</label>
-                    <input type="tel" placeholder="333 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                    <input type="tel" name="telefono" placeholder="333 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-gray-600 mb-1">Il tuo messaggio</label>
-                    <textarea rows="4" required placeholder="Descrivi brevemente di cosa hai bisogno..." class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white"></textarea>
+                    <textarea name="messaggio" rows="4" required placeholder="Descrivi brevemente di cosa hai bisogno..." class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white"></textarea>
                 </div>
 
-                <button type="submit" id="btn-contact-submit" class="w-full bg-brand-blue hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
+                <button type="submit" class="w-full bg-brand-blue hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
                     <i class="fa-solid fa-paper-plane text-xs"></i> Invia messaggio
                 </button>
-
-                <div id="contact-success-msg" class="hidden text-center text-xs font-bold text-green-600 bg-green-50 p-3 rounded-lg border border-green-200 mt-2">
-                    Messaggio inviato con successo! Ti risponderemo al più presto.
-                </div>
             </form>
         </div>
     </section>
@@ -416,7 +394,6 @@
     <!-- FOOTER -->
     <footer class="bg-brand-blue text-white pt-12 pb-8 border-t border-blue-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-800">
-            <!-- Colonna Logo e Info -->
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center text-yellow-400">
@@ -433,7 +410,6 @@
                 </div>
             </div>
 
-            <!-- Colonna Navigazione -->
             <div>
                 <h5 class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">Navigazione</h5>
                 <ul class="space-y-2 text-xs text-blue-200">
@@ -445,7 +421,6 @@
                 </ul>
             </div>
 
-            <!-- Colonna Contatti -->
             <div>
                 <h5 class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">Contatti</h5>
                 <ul class="space-y-2 text-xs text-blue-200">
@@ -473,33 +448,32 @@
         <span class="text-xs hidden sm:inline-block pr-1">Scrivici su WhatsApp</span>
     </a>
 
-    <!-- SCRIPT LOGICA PREVENTIVO & CONTATTI -->
+    <!-- SCRIPT GESTIONE UI PREVENTIVO -->
     <script>
         let counter = 1;
         const counterEl = document.getElementById('counter-value');
         const timeSavedEl = document.getElementById('time-saved');
+        const hiddenNumMobili = document.getElementById('hidden-num-mobili');
         const btnMinus = document.getElementById('btn-minus');
         const btnPlus = document.getElementById('btn-plus');
 
         const step1 = document.getElementById('step-1');
         const step2 = document.getElementById('step-2');
-        const stepSuccess = document.getElementById('step-success');
         const stepTitle = document.getElementById('step-title');
 
         const btnStep1Next = document.getElementById('btn-step1-next');
         const btnStep2Back = document.getElementById('btn-step2-back');
 
-        // Aggiorna conteggio e tempo stimato
         function updateCounter(val) {
             counter = Math.max(1, counter + val);
             counterEl.textContent = counter;
             timeSavedEl.textContent = `~${counter * 45} min risparmiati`;
+            hiddenNumMobili.value = counter;
         }
 
         btnMinus.addEventListener('click', () => updateCounter(-1));
         btnPlus.addEventListener('click', () => updateCounter(1));
 
-        // Navigazione Step Preventivo
         btnStep1Next.addEventListener('click', () => {
             step1.classList.add('hidden');
             step2.classList.remove('hidden');
@@ -510,36 +484,6 @@
             step2.classList.add('hidden');
             step1.classList.remove('hidden');
             stepTitle.textContent = 'PASSO 1 DI 2';
-        });
-
-        // Invio Form Preventivo
-        step2.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btnSubmit = document.getElementById('btn-submit');
-            btnSubmit.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Invio...';
-            btnSubmit.disabled = true;
-
-            setTimeout(() => {
-                step2.classList.add('hidden');
-                stepSuccess.classList.remove('hidden');
-                stepTitle.textContent = 'COMPLETATO';
-            }, 1000);
-        });
-
-        // Invio Secondo Form Contatti In Basso
-        const contactFormBottom = document.getElementById('contact-form-bottom');
-        const btnContactSubmit = document.getElementById('btn-contact-submit');
-        const contactSuccessMsg = document.getElementById('contact-success-msg');
-
-        contactFormBottom.addEventListener('submit', (e) => {
-            e.preventDefault();
-            btnContactSubmit.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Invio in corso...';
-            btnContactSubmit.disabled = true;
-
-            setTimeout(() => {
-                btnContactSubmit.classList.add('hidden');
-                contactSuccessMsg.classList.remove('hidden');
-            }, 1000);
         });
     </script>
 </body>
