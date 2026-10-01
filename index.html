@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembli - Montaggio Mobili Professionali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1a365d',
+                            lightBlue: '#2b6cb0',
+                            accent: '#2563eb',
+                            yellow: '#f59e0b',
+                            bgLight: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-blue-200">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-sm group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-screwdriver-wrench text-yellow-400"></i>
+                </div>
+                <span class="text-2xl font-black text-brand-blue tracking-tight">Assembli</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-gray-600 text-sm">
+                <a href="#servizi" class="hover:text-brand-accent transition-colors">Servizi</a>
+                <a href="#perche-noi" class="hover:text-brand-accent transition-colors">Perché noi</a>
+                <a href="#come-funziona" class="hover:text-brand-accent transition-colors">Come funziona</a>
+                <a href="#preventivo" class="hover:text-brand-accent transition-colors">Preventivo</a>
+            </nav>
+
+            <!-- Call to Action / Info -->
+            <div class="flex items-center gap-6">
+                <a href="tel:+393459299812" class="hidden lg:flex items-center gap-2 font-semibold text-brand-blue text-sm">
+                    <i class="fa-solid fa-phone text-blue-600"></i>
+                    345 929 9812
+                </a>
+                <a href="#preventivo" class="bg-brand-blue hover:bg-blue-900 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    Preventivo gratuito
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Badge Localizzazione -->
+        <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+            <span class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+            <i class="fa-solid fa-users text-yellow-600"></i> Squadra di assemblatori professionisti d'esperienza in provincia di Modena e Bologna
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Colonna Sinistra: Hero Content & Immagine -->
+            <div class="lg:col-span-7 space-y-6">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-blue tracking-tight leading-tight">
+                    Il montaggio mobili, <span class="text-blue-600">fatto bene.</span> Senza stress.
+                </h1>
+                
+                <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                    Assembli trasforma i tuoi scatoloni in arredo pronto all'uso. Partner ufficiali IKEA e TaskRabbit, con strumenti professionali e garanzia strutturale su ogni installazione.
+                </p>
+
+                <!-- Immagine Hero con badge partner -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100 mt-8">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Attrezzi per montaggio mobili" class="w-full h-80 object-cover">
+                    
+                    <div class="absolute bottom-4 left-4 right-4 flex flex-wrap gap-3">
+                        <div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-gray-100 flex items-center gap-2 text-xs font-bold text-blue-900">
+                            <span class="bg-blue-600 text-yellow-300 font-extrabold px-1.5 py-0.5 rounded text-[10px]">IKEA</span> Partner
+                        </div>
+                        <div class="bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-gray-100 flex items-center gap-2 text-xs font-bold text-gray-800">
+                            <i class="fa-solid fa-circle-check text-green-500"></i> TaskRabbit Verified
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonna Destra: Widget Calcolatore Preventivo Rapido -->
+            <div id="preventivo" class="lg:col-span-5">
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 custom-shadow relative">
+                    <div class="border-b border-gray-100 pb-4 mb-6">
+                        <span class="text-xs font-bold tracking-wider text-blue-600 uppercase">Preventivo Immediato</span>
+                        <h3 id="step-title" class="text-sm font-semibold text-gray-500 mt-0.5">PASSO 1 DI 2</h3>
+                    </div>
+
+                    <!-- Step 1: Selezione Numero Mobili -->
+                    <div id="step-1" class="space-y-6">
+                        <label class="block text-xl font-extrabold text-brand-blue">
+                            Quanti mobili devi montare?
+                        </label>
+                        
+                        <div class="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-200">
+                            <button id="btn-minus" type="button" class="w-12 h-12 rounded-lg bg-white border border-gray-300 text-xl font-bold text-gray-700 hover:bg-gray-100 flex items-center justify-center transition-colors shadow-sm">-</button>
+                            <span id="counter-value" class="text-3xl font-black text-brand-blue">1</span>
+                            <button id="btn-plus" type="button" class="w-12 h-12 rounded-lg bg-white border border-gray-300 text-xl font-bold text-gray-700 hover:bg-gray-100 flex items-center justify-center transition-colors shadow-sm">+</button>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-2 text-xs text-green-600 font-semibold bg-green-50 py-2 rounded-lg border border-green-100">
+                            <i class="fa-solid fa-clock"></i> <span id="time-saved">~45 min risparmiati</span>
+                        </div>
+
+                        <button id="btn-step1-next" type="button" class="w-full bg-brand-blue hover:bg-blue-900 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            Continua <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Dati di Contatto (Inizialmente Nascosto) -->
+                    <form id="step-2" class="space-y-4 hidden">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Nome e cognome</label>
+                            <input type="text" id="cust-name" required placeholder="Francesco Piccolo" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Numero di telefono</label>
+                            <input type="tel" id="cust-phone" required placeholder="345 609 9812" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Email</label>
+                            <input type="email" id="cust-email" required placeholder="nome@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Indirizzo di montaggio</label>
+                            <input type="text" id="cust-address" required placeholder="Sposito Novo, 67" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                        </div>
+
+                        <div class="flex gap-3 pt-2">
+                            <button id="btn-step2-back" type="button" class="w-1/3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+                                Indietro
+                            </button>
+                            <button type="submit" id="btn-submit" class="w-2/3 bg-brand-blue hover:bg-blue-900 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all text-sm">
+                                Ricevi preventivo gratuito
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Feedback Messaggio Inviato -->
+                    <div id="step-success" class="hidden text-center py-8 space-y-3">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-blue">Richiesta inviata!</h4>
+                        <p class="text-xs text-gray-600">Ti contatteremo entro 2 ore lavorative con il tuo preventivo personalizzato valido per 3 mesi.</p>
+                    </div>
+
+                    <!-- Footer del Widget -->
+                    <div class="mt-6 pt-4 border-t border-gray-100 grid grid-cols-3 gap-2 text-center text-[10px] text-gray-500 font-medium">
+                        <div class="flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-bolt text-blue-500"></i> Risposta in 2h
+                        </div>
+                        <div class="flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-shield-halved text-blue-500"></i> Preventivo gratuito
+                        </div>
+                        <div class="flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-lock text-blue-500"></i> Garanzia strutturale
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER PARTNERSHIP -->
+    <section class="bg-brand-blue py-6 border-y border-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-blue-200">Partnership Ufficiali</span>
+            <div class="flex items-center gap-3 bg-yellow-400 text-blue-900 px-4 py-1.5 rounded font-black text-lg tracking-wider">
+                IKEA <span class="text-xs font-bold text-blue-900 uppercase">Partner</span>
+            </div>
+            <div class="flex items-center gap-2 text-white font-bold text-base">
+                <span class="bg-green-500 text-white p-1 rounded-md text-xs"><i class="fa-solid fa-check"></i></span> TaskRabbit <span class="text-xs font-normal opacity-80">Verified</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE SERVIZI -->
+    <section id="servizi" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">LA MATRICE DEI SERVIZI</span>
+                <h2 class="text-3xl font-black text-brand-blue mt-2">IKEA o non-IKEA. Montiamo tutto.</h2>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Due specializzazioni, un solo standard di qualità. Dalla libreria Billy al sistema modulare su misura, ogni installazione è coperta dalla nostra garanzia strutturale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card Sistemi IKEA -->
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" alt="Mobili IKEA" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full mb-3">Specialista IKEA</span>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Sistemi IKEA</h3>
+                        <p class="text-xs text-gray-600 mb-4">Pax, Bestå, Metod e ogni sistema modulare. Conosciamo ogni istruzione a memoria e montiamo con la precisione dei partner ufficiali.</p>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Pax / Guardaroba</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Metod / Cucine</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Molte / Camere</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Cucine e librerie Billy</li>
+                        </ul>
+                        <a href="#preventivo" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                            Richiedi questo servizio <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Oltre l'IKEA -->
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Arredamento su misura" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full mb-3">Boutique & Su Misura</span>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Oltre l'IKEA</h3>
+                        <p class="text-xs text-gray-600 mb-4">Arredo di alta gamma, uffici, sistemi modulari complessi e mobili di design. Strumenti professionali e occhio per il dettaglio.</p>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Mobili di design</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Uffici e open-space</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Sistemi modulari</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Arredo su misura</li>
+                        </ul>
+                        <a href="#preventivo" class="text-xs font-bold text-emerald-600 hover:text-emerald-800 flex items-center gap-1">
+                            Richiedi questo servizio <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE PERCHÉ NOI -->
+    <section id="perche-noi" class="py-16 bg-brand-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-yellow-400">PERCHÉ ASSEMBLI</span>
+                <h2 class="text-3xl font-black mt-2">Sei in mani che sanno esattamente dove va ogni vite.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Vantaggio 1 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Zero stress da manuale</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Niente istruzioni indecifrabili né pezzi avanzati. Leggiamo noi il manuale al posto tuo.</p>
+                </div>
+
+                <!-- Vantaggio 2 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Strumenti professionali</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Avvitatori a batteria, livelle laser, carrelli e tutto il necessario per un montaggio perfetto.</p>
+                </div>
+
+                <!-- Vantaggio 3 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Garanzia strutturale</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Ogni installazione è coperta. Se qualcosa non è perfettamente in bolla, torniamo gratis.</p>
+                </div>
+
+                <!-- Vantaggio 4 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Risposta in 2 ore</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Preventivo gratuito e senza impegno entro due ore lavorative dalla richiesta.</p>
+                </div>
+
+                <!-- Vantaggio 5 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Squadra o singolo</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Un tecnico per i piccoli lavori, una squadra coordinata per gli uffici e le grandi installazioni.</p>
+                </div>
+
+                <!-- Vantaggio 6 -->
+                <div class="bg-blue-900/50 border border-blue-800/80 p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 bg-yellow-400 text-blue-950 rounded-lg flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Partner ufficiali</h4>
+                    <p class="text-xs text-blue-200 leading-relaxed">Siamo partner IKEA e TaskRabbit Verified. La qualità è certificata, non promessa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section id="come-funziona" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -top-4 -left-4 bg-yellow-400 text-blue-900 font-extrabold text-xs px-3 py-1.5 rounded-lg shadow">
+                        +2.500 Mobili Montati
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?q=80&w=800&auto=format&fit=crop" alt="Assemblaggio arredo" class="rounded-2xl shadow-xl w-full object-cover h-96">
+                </div>
+
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">COME FUNZIONA</span>
+                        <h2 class="text-3xl font-black text-brand-blue mt-1">Dalla richiesta al mobile pronto in 4 passi.</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-black text-sm flex items-center justify-center shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue text-sm">Richiedi</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Compila il preventivo con indirizzo e numero di mobili. Ti rispondiamo in 2 ore con un prezzo chiaro.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-black text-sm flex items-center justify-center shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue text-sm">Prenoti</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Scegli data e fascia oraria. Ti assegniamo il tecnico o la squadra più adatta al tuo lavoro.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-black text-sm flex items-center justify-center shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue text-sm">Montiamo</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Arriviamo con strumenti professionali, montiamo, livelliamo e portiamo via gli imballaggi.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-black text-sm flex items-center justify-center shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue text-sm">Goditi</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Controlli il lavoro, firma e consegna. Il lavoro è finito. Garanzia strutturale inclusa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-blue text-white pt-12 pb-8 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-800">
+            <!-- Colonna Logo e Info -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center text-yellow-400">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="text-xl font-black text-white">Assembli</span>
+                </div>
+                <p class="text-xs text-blue-200 leading-relaxed">
+                    Servizi di montaggio mobili professionale a domicilio. Partner ufficiali IKEA e TaskRabbit Verified. Trasformiamo gli scatoloni in arredo pronto all'uso.
+                </p>
+                <div class="flex gap-2">
+                    <span class="bg-blue-950 text-yellow-400 border border-blue-800 text-[10px] font-bold px-2 py-1 rounded">IKEA Partner</span>
+                    <span class="bg-blue-950 text-white border border-blue-800 text-[10px] font-bold px-2 py-1 rounded">TaskRabbit Verified</span>
+                </div>
+            </div>
+
+            <!-- Colonna Navigazione -->
+            <div>
+                <h5 class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">Navigazione</h5>
+                <ul class="space-y-2 text-xs text-blue-200">
+                    <li><a href="#servizi" class="hover:text-white transition-colors">Servizi</a></li>
+                    <li><a href="#perche-noi" class="hover:text-white transition-colors">Perché noi</a></li>
+                    <li><a href="#come-funziona" class="hover:text-white transition-colors">Come funziona</a></li>
+                    <li><a href="#preventivo" class="hover:text-white transition-colors">Preventivo</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonna Contatti -->
+            <div>
+                <h5 class="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">Contatti</h5>
+                <ul class="space-y-2 text-xs text-blue-200">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-yellow-400"></i> +39 345 929 9812</li>
+                    <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-green-400"></i> WhatsApp: +39 345 929 9812</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-yellow-400"></i> ciao@assembli.it</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-yellow-400"></i> Provincia di Modena e Bologna</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-yellow-400"></i> Lun-Sab: 8:00 - 20:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-blue-300">
+            <p>© 2026 Assembli. Tutti i diritti riservati.</p>
+            <div class="flex gap-4 mt-2 sm:mt-0">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Termini di Servizio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTTONE WHATSAPP FLOTTANTE -->
+    <a href="https://wa.me/393459299812" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-bold p-3.5 rounded-full shadow-2xl flex items-center gap-2 z-50 transition-all hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="text-xs hidden sm:inline-block pr-1">Scrivici su WhatsApp</span>
+    </a>
+
+    <!-- SCRIPT LOGICA PREVENTIVO INTERATTIVO -->
+    <script>
+        let counter = 1;
+        const counterEl = document.getElementById('counter-value');
+        const timeSavedEl = document.getElementById('time-saved');
+        const btnMinus = document.getElementById('btn-minus');
+        const btnPlus = document.getElementById('btn-plus');
+
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const stepSuccess = document.getElementById('step-success');
+        const stepTitle = document.getElementById('step-title');
+
+        const btnStep1Next = document.getElementById('btn-step1-next');
+        const btnStep2Back = document.getElementById('btn-step2-back');
+
+        // Aggiorna conteggio e tempo stimato
+        function updateCounter(val) {
+            counter = Math.max(1, counter + val);
+            counterEl.textContent = counter;
+            timeSavedEl.textContent = `~${counter * 45} min risparmiati`;
+        }
+
+        btnMinus.addEventListener('click', () => updateCounter(-1));
+        btnPlus.addEventListener('click', () => updateCounter(1));
+
+        // Navigazione Step
+        btnStep1Next.addEventListener('click', () => {
+            step1.classList.add('hidden');
+            step2.classList.remove('hidden');
+            stepTitle.textContent = 'PASSO 2 DI 2';
+        });
+
+        btnStep2Back.addEventListener('click', () => {
+            step2.classList.add('hidden');
+            step1.classList.remove('hidden');
+            stepTitle.textContent = 'PASSO 1 DI 2';
+        });
+
+        // Invio Form
+        step2.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btnSubmit = document.getElementById('btn-submit');
+            btnSubmit.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Invio...';
+            btnSubmit.disabled = true;
+
+            setTimeout(() => {
+                step2.classList.add('hidden');
+                stepSuccess.classList.remove('hidden');
+                stepTitle.textContent = 'COMPLETATO';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
