@@ -48,6 +48,7 @@
                 <a href="#perche-noi" class="hover:text-brand-accent transition-colors">Perché noi</a>
                 <a href="#come-funziona" class="hover:text-brand-accent transition-colors">Come funziona</a>
                 <a href="#preventivo" class="hover:text-brand-accent transition-colors">Preventivo</a>
+                <a href="#contatti" class="hover:text-brand-accent transition-colors">Contatti</a>
             </nav>
 
             <!-- Call to Action / Info -->
@@ -126,23 +127,23 @@
                         </button>
                     </div>
 
-                    <!-- Step 2: Dati di Contatto (Inizialmente Nascosto) -->
+                    <!-- Step 2: Dati di Contatto Generici -->
                     <form id="step-2" class="space-y-4 hidden">
                         <div>
                             <label class="block text-xs font-bold text-gray-600 mb-1">Nome e cognome</label>
-                            <input type="text" id="cust-name" required placeholder="Francesco Piccolo" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                            <input type="text" id="cust-name" required placeholder="Mario Rossi" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-600 mb-1">Numero di telefono</label>
-                            <input type="tel" id="cust-phone" required placeholder="345 609 9812" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                            <input type="tel" id="cust-phone" required placeholder="333 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-600 mb-1">Email</label>
-                            <input type="email" id="cust-email" required placeholder="nome@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                            <input type="email" id="cust-email" required placeholder="mario.rossi@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-600 mb-1">Indirizzo di montaggio</label>
-                            <input type="text" id="cust-address" required placeholder="Sposito Novo, 67" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
+                            <input type="text" id="cust-address" required placeholder="Via Rizzoli 12, Bologna" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none">
                         </div>
 
                         <div class="flex gap-3 pt-2">
@@ -370,6 +371,48 @@
         </div>
     </section>
 
+    <!-- SEZIONE NUOVO FORM DI CONTATTO IN BASSO -->
+    <section id="contatti" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">CONTATTACI DIRETTAMENTE</span>
+                <h2 class="text-3xl font-black text-brand-blue mt-1">Hai domande o esigenze particolari?</h2>
+                <p class="text-xs text-gray-600 mt-2">Scrivici un messaggio per informazioni generali, grandi progetti o preventivi su misura.</p>
+            </div>
+
+            <form id="contact-form-bottom" class="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 custom-shadow space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 mb-1">Nome e cognome</label>
+                        <input type="text" required placeholder="Mario Rossi" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 mb-1">Email</label>
+                        <input type="email" required placeholder="mario.rossi@email.it" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 mb-1">Telefono (Opzionale)</label>
+                    <input type="tel" placeholder="333 123 4567" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 mb-1">Il tuo messaggio</label>
+                    <textarea rows="4" required placeholder="Descrivi brevemente di cosa hai bisogno..." class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm outline-none bg-white"></textarea>
+                </div>
+
+                <button type="submit" id="btn-contact-submit" class="w-full bg-brand-blue hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Invia messaggio
+                </button>
+
+                <div id="contact-success-msg" class="hidden text-center text-xs font-bold text-green-600 bg-green-50 p-3 rounded-lg border border-green-200 mt-2">
+                    Messaggio inviato con successo! Ti risponderemo al più presto.
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-brand-blue text-white pt-12 pb-8 border-t border-blue-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-800">
@@ -398,6 +441,7 @@
                     <li><a href="#perche-noi" class="hover:text-white transition-colors">Perché noi</a></li>
                     <li><a href="#come-funziona" class="hover:text-white transition-colors">Come funziona</a></li>
                     <li><a href="#preventivo" class="hover:text-white transition-colors">Preventivo</a></li>
+                    <li><a href="#contatti" class="hover:text-white transition-colors">Contatti</a></li>
                 </ul>
             </div>
 
@@ -429,7 +473,7 @@
         <span class="text-xs hidden sm:inline-block pr-1">Scrivici su WhatsApp</span>
     </a>
 
-    <!-- SCRIPT LOGICA PREVENTIVO INTERATTIVO -->
+    <!-- SCRIPT LOGICA PREVENTIVO & CONTATTI -->
     <script>
         let counter = 1;
         const counterEl = document.getElementById('counter-value');
@@ -455,7 +499,7 @@
         btnMinus.addEventListener('click', () => updateCounter(-1));
         btnPlus.addEventListener('click', () => updateCounter(1));
 
-        // Navigazione Step
+        // Navigazione Step Preventivo
         btnStep1Next.addEventListener('click', () => {
             step1.classList.add('hidden');
             step2.classList.remove('hidden');
@@ -468,7 +512,7 @@
             stepTitle.textContent = 'PASSO 1 DI 2';
         });
 
-        // Invio Form
+        // Invio Form Preventivo
         step2.addEventListener('submit', (e) => {
             e.preventDefault();
             const btnSubmit = document.getElementById('btn-submit');
@@ -479,6 +523,22 @@
                 step2.classList.add('hidden');
                 stepSuccess.classList.remove('hidden');
                 stepTitle.textContent = 'COMPLETATO';
+            }, 1000);
+        });
+
+        // Invio Secondo Form Contatti In Basso
+        const contactFormBottom = document.getElementById('contact-form-bottom');
+        const btnContactSubmit = document.getElementById('btn-contact-submit');
+        const contactSuccessMsg = document.getElementById('contact-success-msg');
+
+        contactFormBottom.addEventListener('submit', (e) => {
+            e.preventDefault();
+            btnContactSubmit.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Invio in corso...';
+            btnContactSubmit.disabled = true;
+
+            setTimeout(() => {
+                btnContactSubmit.classList.add('hidden');
+                contactSuccessMsg.classList.remove('hidden');
             }, 1000);
         });
     </script>
